@@ -16,6 +16,7 @@ services:
       - "24224:24224/udp"
     volumes:
       - ./scripts/fluentbit/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
+      - ./scripts/fluentbit/parsers.conf:/fluent-bit/etc/parsers.conf
       - ./logs:/app/logs
 
   nginx:
